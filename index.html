@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>柚子猫-治愈系动画短片与角色宇宙_柚子猫全集/更新/角色解析</title>
+<meta name="description" content="柚子猫专题页：汇总柚子猫系列动画短片、角色关系、更新动态与深度解析。从治愈画风到日常叙事，提供观看顺序、同类推荐、FAQ与社区评论，帮你快速了解柚子猫的内容脉络与最新看点。">
+<meta name="keywords" content="柚子猫,柚子猫动画,柚子猫短片,柚子猫角色,柚子猫更新">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f4a261'/%3E%3Ccircle cx='12' cy='14' r='4' fill='%23fff3e0'/%3E%3Ccircle cx='20' cy='14' r='4' fill='%23fff3e0'/%3E%3Cpath d='M8 22 Q16 30 24 22' stroke='%23fff3e0' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root {
+  --bg: #fdfaf6;
+  --surface: #ffffff;
+  --ink: #2d2a24;
+  --ink-soft: #6b6256;
+  --accent: #e07a3a;
+  --accent-soft: #fbe9db;
+  --accent-deep: #b85c24;
+  --gold: #c9a227;
+  --line: #ece5dc;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --shadow: 0 10px 28px rgba(80, 56, 30, 0.07);
+  --shadow-hover: 0 16px 36px rgba(80, 56, 30, 0.12);
+  --max-w: 1200px;
+  --font: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 15px;
+  background-image: radial-gradient(circle at 8% 2%, rgba(224,122,58,.06) 0, transparent 40%), radial-gradient(circle at 96% 8%, rgba(201,162,39,.07) 0, transparent 38%);
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul, ol { list-style: none; }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
+
+/* 导航 */
+.top-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(253, 250, 246, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 66px; gap: 14px;
+}
+.logo-badge {
+  display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: .5px;
+  color: var(--accent-deep); flex-shrink: 0;
+}
+.logo-mark {
+  width: 36px; height: 36px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  display: grid; place-items: center; color: #fff; font-size: 21px; font-weight: 900;
+  box-shadow: 0 4px 12px rgba(224,122,58,.35);
+}
+.nav-links { display: flex; flex-wrap: wrap; gap: 4px 2px; }
+.nav-links a {
+  padding: 7px 13px; border-radius: 999px; font-size: 14px; color: var(--ink-soft);
+  transition: background .2s, color .2s;
+}
+.nav-links a:hover { background: var(--accent-soft); color: var(--accent-deep); }
+.nav-cta {
+  background: var(--accent); color: #fff !important; padding: 8px 18px !important;
+  border-radius: 999px !important; font-weight: 600; flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(224,122,58,.32);
+}
+.nav-cta:hover { background: var(--accent-deep) !important; }
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .nav-inner { height: 58px; }
+}
+
+/* Banner */
+.hero {
+  padding: 52px 0 34px;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ""; position: absolute; right: -90px; top: -60px; width: 320px; height: 320px;
+  border-radius: 50%; background: radial-gradient(circle, rgba(224,122,58,.16), transparent 68%);
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1.35fr 1fr; gap: 40px; align-items: center;
+}
+.hero h1 {
+  font-size: clamp(30px, 4.4vw, 46px); line-height: 1.2; font-weight: 900; letter-spacing: -.5px;
+  margin-bottom: 16px;
+}
+.hero h1 em { font-style: normal; color: var(--accent); position: relative; }
+.hero-sub {
+  font-size: 16px; color: var(--ink-soft); max-width: 560px; margin-bottom: 22px;
+}
+.search-wrap {
+  display: flex; gap: 10px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 999px; padding: 6px 6px 6px 20px; box-shadow: var(--shadow);
+  max-width: 480px; margin-bottom: 20px;
+}
+.search-wrap input {
+  border: none; outline: none; flex: 1; font-size: 15px; background: transparent; color: var(--ink);
+  font-family: var(--font);
+}
+.search-wrap button {
+  border: none; background: var(--accent); color: #fff; border-radius: 999px;
+  padding: 9px 22px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: var(--font);
+  transition: background .2s;
+}
+.search-wrap button:hover { background: var(--accent-deep); }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.hero-tags a {
+  font-size: 13px; padding: 6px 14px; border-radius: 999px; background: var(--surface);
+  border: 1px solid var(--line); color: var(--ink-soft); box-shadow: 0 2px 6px rgba(80,56,30,.04);
+  transition: all .2s;
+}
+.hero-tags a:hover { border-color: var(--accent); color: var(--accent-deep); transform: translateY(-1px); }
+.hero-visual {
+  background: linear-gradient(150deg, #fff2e5, #fbe3ce 55%, #f5d7b8);
+  border-radius: 26px; padding: 30px; box-shadow: var(--shadow); border: 1px solid #f3e2d1;
+  position: relative;
+}
+.hero-visual .visual-badge {
+  display: inline-block; background: #fff; border-radius: 999px; padding: 5px 14px;
+  font-size: 12px; font-weight: 700; color: var(--accent-deep); letter-spacing: .5px;
+  box-shadow: 0 3px 10px rgba(184,92,36,.16); margin-bottom: 16px;
+}
+.hero-visual .visual-title { font-size: 21px; font-weight: 800; margin-bottom: 8px; }
+.hero-visual .visual-desc { font-size: 14px; color: #7a5c40; margin-bottom: 18px; }
+.hero-visual .visual-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero-visual .visual-row span {
+  background: rgba(255,255,255,.7); border-radius: 10px; padding: 7px 13px; font-size: 13px;
+  font-weight: 600; color: #8a5a30;
+}
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 26px; }
+  .hero { padding: 34px 0 24px; }
+}
+
+/* 通用 section */
+.section { padding: 42px 0; }
+.section-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+  margin-bottom: 24px; flex-wrap: wrap;
+}
+.section-head h2 {
+  font-size: 24px; font-weight: 800; letter-spacing: -.3px; position: relative; padding-left: 15px;
+}
+.section-head h2::before {
+  content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 5px;
+  border-radius: 4px; background: linear-gradient(var(--accent), var(--gold));
+}
+.section-head .sub { color: var(--ink-soft); font-size: 14px; }
+.section-head .more {
+  font-size: 13px; color: var(--accent-deep); font-weight: 600; white-space: nowrap;
+}
+
+/* 内容简介 */
+.intro-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 30px 32px; box-shadow: var(--shadow);
+}
+.intro-card p { color: var(--ink-soft); margin-bottom: 12px; font-size: 15px; }
+.intro-card p:last-child { margin-bottom: 0; }
+.intro-card strong { color: var(--accent-deep); }
+
+/* 推荐卡片 */
+.card-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 20px;
+}
+.p-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow); transition: transform .22s, box-shadow .22s;
+  display: flex; flex-direction: column;
+}
+.p-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.p-card .cover {
+  height: 120px; display: flex; align-items: flex-end; padding: 14px 16px;
+  font-size: 26px; font-weight: 900; color: rgba(255,255,255,.92);
+  background: linear-gradient(135deg, #f0b27a, #e07a3a);
+  position: relative; letter-spacing: 1px;
+}
+.p-card:nth-child(3n+2) .cover { background: linear-gradient(135deg, #d6b26a, #b98a2f); }
+.p-card:nth-child(3n+3) .cover { background: linear-gradient(135deg, #e8a87c, #c97a52); }
+.p-card .cover .heat {
+  position: absolute; top: 10px; right: 12px; background: rgba(255,255,255,.85);
+  color: var(--accent-deep); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px;
+}
+.p-card .body { padding: 16px 18px 18px; flex: 1; display: flex; flex-direction: column; }
+.p-card .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.p-card .tag-row span {
+  font-size: 11px; padding: 3px 9px; border-radius: 6px; background: var(--accent-soft);
+  color: var(--accent-deep); font-weight: 600;
+}
+.p-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; line-height: 1.4; }
+.p-card .desc { font-size: 13px; color: var(--ink-soft); flex: 1; margin-bottom: 12px; }
+.p-card .meta {
+  display: flex; justify-content: space-between; font-size: 12px; color: #9a8f80;
+  border-top: 1px dashed var(--line); padding-top: 10px;
+}
+
+/* 最新更新列表 */
+.update-list { display: flex; flex-direction: column; gap: 10px; }
+.update-item {
+  display: flex; align-items: center; gap: 16px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 20px;
+  box-shadow: 0 3px 10px rgba(80,56,30,.04); transition: border-color .2s, transform .2s;
+}
+.update-item:hover { border-color: #e9d3bf; transform: translateX(3px); }
+.update-item .dot {
+  width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(224,122,58,.14);
+}
+.update-item .u-main { flex: 1; font-size: 14px; }
+.update-item .u-main b { font-weight: 700; }
+.update-item .u-main span { color: var(--ink-soft); }
+.update-item .u-time { font-size: 12px; color: #a3978a; white-space: nowrap; }
+
+/* 分类入口 */
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.cat-item {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 20px 16px; text-align: center; box-shadow: 0 3px 10px rgba(80,56,30,.04);
+  transition: all .2s;
+}
+.cat-item:hover { border-color: var(--accent); background: #fffaf5; transform: translateY(-2px); }
+.cat-item .icon { font-size: 26px; margin-bottom: 8px; }
+.cat-item .name { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+.cat-item .cnt { font-size: 12px; color: #a3978a; }
+
+/* 深度解析 */
+.deep-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 34px 36px; box-shadow: var(--shadow);
+}
+.deep-card h3 { font-size: 19px; font-weight: 800; margin: 22px 0 10px; color: var(--ink); }
+.deep-card h3:first-child { margin-top: 0; }
+.deep-card p { color: var(--ink-soft); margin-bottom: 12px; font-size: 15px; }
+.deep-card .highlight {
+  background: var(--accent-soft); border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0;
+  padding: 14px 18px; font-size: 14px; color: #7a4a25; margin: 16px 0;
+}
+
+/* 体验指南 */
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.guide-item {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 20px 22px; box-shadow: 0 3px 10px rgba(80,56,30,.04);
+}
+.guide-item .g-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+.guide-item .g-title .g-ico {
+  width: 28px; height: 28px; border-radius: 8px; background: var(--accent-soft);
+  display: grid; place-items: center; font-size: 14px;
+}
+.guide-item p { font-size: 13px; color: var(--ink-soft); }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  overflow: hidden; box-shadow: 0 2px 8px rgba(80,56,30,.03);
+}
+.faq-q {
+  padding: 16px 22px; font-size: 15px; font-weight: 700; display: flex; justify-content: space-between;
+  align-items: center; cursor: pointer; gap: 12px; user-select: none;
+}
+.faq-q .mark { color: var(--accent); font-size: 18px; transition: transform .2s; flex-shrink: 0; }
+.faq-item.open .faq-q .mark { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease;
+  font-size: 14px; color: var(--ink-soft); padding: 0 22px;
+}
+.faq-item.open .faq-a { max-height: 260px; padding: 0 22px 18px; }
+
+/* 评论 */
+.comment-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.comment-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 16px 18px; box-shadow: 0 2px 8px rgba(80,56,30,.03);
+}
+.comment-card .c-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.c-avatar {
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 13px; font-weight: 700; color: #fff; background: linear-gradient(135deg, #e8a87c, #d0854a);
+  flex-shrink: 0;
+}
+.comment-card:nth-child(4n+2) .c-avatar { background: linear-gradient(135deg, #d6b26a, #b98a2f); }
+.comment-card:nth-child(4n+3) .c-avatar { background: linear-gradient(135deg, #c7a5e0, #8f6bb3); }
+.comment-card:nth-child(4n+4) .c-avatar { background: linear-gradient(135deg, #9fc4b0, #5f9c7c); }
+.c-name { font-size: 13px; font-weight: 700; }
+.c-time { font-size: 11px; color: #a3978a; }
+.comment-card .c-text { font-size: 13px; color: var(--ink-soft); }
+
+/* 资讯 */
+.news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+.news-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 20px 22px; box-shadow: 0 3px 10px rgba(80,56,30,.04); transition: transform .2s, box-shadow .2s;
+}
+.news-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.news-card .n-date { font-size: 12px; color: var(--accent-deep); font-weight: 600; margin-bottom: 6px; }
+.news-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; line-height: 1.45; }
+.news-card p { font-size: 13px; color: var(--ink-soft); }
+
+/* 页脚 */
+.site-footer {
+  background: #2d2a24; color: #cfc6b8; margin-top: 30px; padding: 44px 0 30px;
+}
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 30px; }
+.footer-brand .fb-logo { display: flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+.footer-brand .fb-logo .logo-mark { width: 32px; height: 32px; font-size: 18px; }
+.footer-brand p { font-size: 13px; line-height: 1.8; color: #a89e90; }
+.footer-col h4 { font-size: 14px; color: #fff; margin-bottom: 14px; font-weight: 700; }
+.footer-col a { display: block; font-size: 13px; color: #a89e90; margin-bottom: 9px; transition: color .2s; }
+.footer-col a:hover { color: #f0b27a; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08); margin-top: 32px; padding-top: 22px;
+  font-size: 12px; color: #7d7466; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+@media (max-width: 760px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+  .section { padding: 32px 0; }
+  .intro-card, .deep-card { padding: 22px 20px; }
+  .section-head h2 { font-size: 21px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 导航 -->
+<nav class="top-nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo-badge">
+      <span class="logo-mark">柚</span>
+      <span>柚子猫</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#section-hot">热门推荐</a>
+      <a href="/#section-latest">最新更新</a>
+      <a href="/#section-category">分类入口</a>
+      <a href="/#section-deep">深度解析</a>
+      <a href="/#section-guide">体验指南</a>
+      <a href="/#section-faq">常见问题</a>
+      <a href="/#section-comment">用户评论</a>
+      <a href="/#section-news">相关资讯</a>
+    </div>
+    <a href="/#section-hot" class="nav-cta">开始探索</a>
+  </div>
+</nav>
+
+<!-- Banner -->
+<header class="hero" id="section-hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>柚子猫：<em>治愈系</em>动画短片与角色宇宙</h1>
+      <p class="hero-sub">
+        从一只圆滚滚的橘猫出发，柚子猫用日常碎片、温柔画风和轻叙事，串起短片、角色小传与季节限定篇。
+        这里汇总柚子猫全集脉络、更新动态与深度解析，适合收藏追更。
+      </p>
+      <div class="search-wrap">
+        <input type="text" placeholder="搜索柚子猫短片、角色或更新关键词…" aria-label="搜索柚子猫内容">
+        <button type="button">搜索</button>
+      </div>
+      <div class="hero-tags">
+        <a href="/#section-hot">全集速览</a>
+        <a href="/#section-latest">今日更新</a>
+        <a href="/#section-deep">角色解析</a>
+        <a href="/#section-category">短片分类</a>
+        <a href="/#section-faq">观看顺序</a>
+        <a href="/#section-comment">社区讨论</a>
+        <a href="/#section-news">制作动态</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="visual-badge">本周专题 · 柚子猫</div>
+      <div class="visual-title">柔软日常 · 慢节奏短片特辑</div>
+      <div class="visual-desc">整理柚子猫最受欢迎的治愈日常篇章，从午后打盹到雨天散步，一次看清角色关系与叙事风格。</div>
+      <div class="visual-row">
+        <span>全 24 集</span>
+        <span>画风：暖色手绘</span>
+        <span>更新至 2026.11</span>
+        <span>豆瓣 8.9 分</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 内容简介 -->
+<section class="section" id="section-about">
+  <div class="container">
+    <div class="section-head">
+      <h2>关于柚子猫专题</h2>
+      <span class="sub">先了解它，再决定从哪里开始看</span>
+    </div>
+    <div class="intro-card">
+      <p><strong>柚子猫</strong>是近几年在短片与插画领域逐渐积累口碑的原创角色系列，以一只圆脸橘猫为主角，围绕它和身边小伙伴的日常展开。内容多以 2–5 分钟的短篇呈现，没有强冲突剧情，靠细腻分镜、生活化台词和温柔配色留住观众。对喜欢治愈系、慢节奏、低压力内容的用户来说，柚子猫是很容易“入坑”的一类作品。</p>
+      <p>这个专题页把<strong>柚子猫</strong>相关的短片、角色小传、更新节点和社区讨论集中到一处。你可以先看热门推荐快速建立印象，再通过深度解析理解它的叙事结构与画风特点，最后用 FAQ 和评论补足观看顺序与同类推荐。页面内容按信息密度排列，适合在通勤、午休或睡前浏览。</p>
+      <p>如果你正在搜索“<strong>柚子猫</strong>怎么看”“柚子猫更新到哪了”“柚子猫角色有哪些”这类问题，本页会把常见需求一次覆盖：提供内容脉络、更新状态、分类入口和延伸推荐，减少反复跳转。收藏本页后，后续更新动态和专题资讯也会持续补充。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="section" id="section-hot">
+  <div class="container">
+    <div class="section-head">
+      <h2>热门内容推荐</h2>
+      <span class="sub">编辑精选 · 柚子猫高口碑短片与角色篇</span>
+      <a href="/#section-latest" class="more">看最新更新 →</a>
+    </div>
+    <div class="card-grid">
+      <article class="p-card">
+        <div class="cover">午后打盹<span class="heat">热度 9820</span></div>
+        <div class="body">
+          <div class="tag-row"><span>日常</span><span>治愈</span><span>短片</span></div>
+          <h3>柚子猫：午后打盹的第七种姿势</h3>
+          <p class="desc">阳光斜进窗台，柚子猫用一整天研究“怎么睡得更舒服”，轻喜剧节奏，适合午休放松观看。</p>
+          <div class="meta"><span>更新至 2026.10</span><span>评分 9.1</span></div>
+        </div>
+      </article>
+      <article class="p-card">
+        <div class="cover">雨夜散步<span class="heat">热度 9340</span></div>
+        <div class="body">
+          <div class="tag-row"><span>氛围</span><span>手绘</span><span>短篇</span></div>
+          <h3>柚子猫：雨夜散步与一把小黄伞</h3>
+          <p class="desc">全片几乎没有台词，靠雨声、脚步和灯光表现情绪，是柚子猫系列里视听完成度较高的一集。</p>
+          <div class="meta"><span>已完结</span><span>评分 9.0</span></div>
+        </div>
+      </article>
+      <article class="p-card">
+        <div class="cover">新朋友<span class="heat">热度 8910</span></div>
+        <div class="body">
+          <div class="tag-row"><span>角色</span><span>群像</span><span>日常</span></div>
+          <h3>柚子猫：隔壁搬来一只话很多的小狗</h3>
+          <p class="desc">新角色加入后节奏明显加快，柚子猫的“冷面吐槽”和小狗的热情形成对照，系列少见的热闹篇。</p>
+          <div class="meta"><span>更新至 2026.09</span><span>评分 8.8</span></div>
+        </div>
+      </article>
+      <article class="p-card">
+        <div class="cover">厨房事故<span class="heat">热度 8670</span></div>
+        <div class="body">
+          <div class="tag-row"><span>轻喜剧</span><span>美食</span><span>短片</span></div>
+          <h3>柚子猫：第一次做饭把厨房变成灾难现场</h3>
+          <p class="desc">从打蛋到收尾全程高能，对白少、动作多，适合刚接触柚子猫的新观众作为入门篇。</p>
+          <div class="meta"><span>已完结</span><span>评分 8.7</span></div>
+        </div>
+      </article>
+      <article class="p-card">
+        <div class="cover">季节限定<span class="heat">热度 8420</span></div>
+        <div class="body">
+          <div class="tag-row"><span>秋日</span><span>情绪</span><span>特辑</span></div>
+          <h3>柚子猫：秋天捡到一片会发光的叶子</h3>
+          <p class="desc">柚子猫秋季限定篇，画面色彩偏暖黄，叙事围绕“短暂的拥有”展开，结尾留白处理得很舒服。</p>
+          <div class="meta"><span>2026.10 上线</span><span>评分 8.9</span></div>
+        </div>
+      </article>
+      <article class="p-card">
+        <div class="cover">角色档案<span class="heat">热度 8180</span></div>
+        <div class="body">
+          <div class="tag-row"><span>角色</span><span>设定</span><span>资料</span></div>
+          <h3>柚子猫角色小传：三花、小黑与面包店老板</h3>
+          <p class="desc">把柚子猫周围出现过的角色做了集中梳理，含关系线、出场集数和性格关键词，适合考据党。</p>
+          <div class="meta"><span>持续更新</span><span>评分 8.6</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="section" id="section-latest">
+  <div class="container">
+    <div class="section-head">
+      <h2>最新更新与热播动态</h2>
+      <span class="sub">截至 2026 年 11 月 7 日</span>
+      <a href="/#section-news" class="more">更多资讯 →</a>
+    </div>
+    <div class="update-list">
+      <div class="update-item"><span class="dot"></span><div class="u-main"><b>柚子猫 · 冬季篇预告</b><span> 发布 30 秒先导片段，正片预计 11 月下旬上线。</span></div><span class="u-time">2026.11.06</span></div>
+      <div class="update-item"><span class="dot"></span><div class="u-main"><b>第 24 集「屋檐下的雪」</b><span> 已上线，柚子猫首次在雪天场景中长时间停留。</span></div><span class="u-time">2026.11.03</span></div>
+      <div class="update-item"><span class="dot"></span><div class="u-main"><b>角色投票结果公布</b><span> 三花以 37% 得票率成为本月人气角色。</span></div><span class="u-time">2026.10.29</span></div>
+      <div class="update-item"><span class="dot"></span><div class="u-main"><b>秋季特辑「发光叶子」</b><span> 上线三天播放量突破系列单集纪录。</span></div><span class="u-time">2026.10.22</span></div>
+      <div class="update-item"><span class="dot"></span><div class="u-main"><b>原声带试听开放</b><span> 柚子猫前三集配乐已上线音乐平台，含两首未公开 demo。</span></div><span class="u-time">2026.10.15</span></div>
+      <div class="update-item"><span class="dot"></span><div class="u-main"><b>衍生插画集筹备中</b><span> 官方透露将收录 60 余张场景原画与分镜草图。</span></div><span class="u-time">2026.10.09</span></div>
+      <div class="update-item"><span class="dot"></span><div class="u-main"><b>第 23 集「快递到了」</b><span> 已上线，小狗角色回归，互动量明显上升。</span></div><span class="u-time">2026.09.28</span></div>
+      <div class="update-item"><span class="dot"></span><div class="u-main"><b>创作者访谈更新</b><span> 导演聊到柚子猫的灵感来源与分镜习惯。</span></div><span class="u-time">2026.09.20</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="section" id="section-category">
+  <div class="container">
+    <div class="section-head">
+      <h2>分类入口</h2>
+      <span class="sub">按内容类型快速筛选柚子猫短片</span>
+    </div>
+    <div class="cat-grid">
+      <a href="/#section-hot" class="cat-item"><div class="icon">🌤️</div><div class="name">日常治愈</div><div class="cnt">8 部短片</div></a>
+      <a href="/#section-hot" class="cat-item"><div class="icon">🌧️</div><div class="name">氛围情绪</div><div class="cnt">5 部短片</div></a>
+      <a href="/#section-hot" class="cat-item"><div class="icon">🐾</div><div class="name">角色群像</div><div class="cnt">7 篇资料</div></a>
+      <a href="/#section-hot" class="cat-item"><div class="icon">🍂</div><div class="name">季节限定</div><div class="cnt">4 部特辑</div></a>
+      <a href="/#section-hot" class="cat-item"><div class="icon">🎨</div><div class="name">画风与分镜</div><div class="cnt">6 篇解析</div></a>
+      <a href="/#section-hot" class="cat-item"><div class="icon">🎵</div><div class="name">配乐与声音</div><div class="cnt">3 篇专题</div></a>
+      <a href="/#section-hot" class="cat-item"><div class="icon">📖</div><div class="name">观看顺序</div><div class="cnt">2 篇指南</div></a>
+      <a href="/#section-hot" class="cat-item"><div class="icon">💬</div><div class="name">社区讨论</div><div class="cnt">持续更新</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="section" id="section-deep">
+  <div class="container">
+    <div class="section-head">
+      <h2>深度解析：柚子猫为什么耐看</h2>
+      <span class="sub">从题材、画风到叙事节奏的编辑观察</span>
+    </div>
+    <div class="deep-card">
+      <h3>一、题材定位：日常里的微小情绪</h3>
+      <p><strong>柚子猫</strong>的叙事范围很小，基本围绕吃饭、睡觉、散步、等快递这类生活片段。它的吸引力不来自强情节，而来自对“小情绪”的捕捉：睡醒后的迷糊、下雨天的迟疑、收到礼物时的克制开心。这种题材对观众的要求低，但共情门槛也低，容易在不同年龄段里找到共鸣。</p>
+      <h3>二、画风与分镜：暖色手绘的松弛感</h3>
+      <p>系列整体采用偏暖的底色和圆润线条，角色动作幅度不大，但分镜会刻意留出空镜时间。比如雨夜篇里，镜头会在窗玻璃上的水痕停留两三秒，给情绪留出呼吸感。这种处理让<strong>柚子猫</strong>在同类短片里显得更“慢”，也更适合需要放松的观看场景。</p>
+      <div class="highlight">编辑提示：如果你偏好快节奏、强反转的内容，柚子猫可能会显得偏淡；但如果你喜欢治愈系、低压力短片，它的节奏反而是优势。</div>
+      <h3>三、角色关系：冷面主角与热闹配角</h3>
+      <p>柚子猫本身表情不多，台词也偏少，更多靠配角的热情来推动互动。三花的细腻、小黑的莽撞、小狗的话多，形成了比较清楚的性格分工。角色之间没有复杂矛盾，关系线以陪伴为主，这也是系列能持续做日常篇的基础。</p>
+      <h3>四、适合人群与观看建议</h3>
+      <p>适合喜欢治愈短篇、手绘画风、轻叙事内容的观众，也适合作为睡前或通勤时的碎片化观看选择。如果第一次接触<strong>柚子猫</strong>，建议从“午后打盹”或“厨房事故”这类轻喜剧入门，再过渡到雨夜篇、季节限定篇这类情绪更浓的内容。看完后再回看角色小传，会对系列的关系网络有更完整的理解。</p>
+      <h3>五、同类内容比较与搜索意图</h3>
+      <p>与一些强剧情短片相比，<strong>柚子猫</strong>更接近“情绪小品”，它不追求每集都有完整起承转合，而是用氛围和细节累积记忆点。搜索这个词的用户，通常想了解：更新到哪了、观看顺序怎么排、角色有哪些、哪几集口碑最好。本页把这些问题拆进推荐、FAQ 和评论区，方便按需查阅。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 体验指南 -->
+<section class="section" id="section-guide">
+  <div class="container">
+    <div class="section-head">
+      <h2>体验指南</h2>
+      <span class="sub">如何更高效地浏览柚子猫专题内容</span>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-item">
+        <div class="g-title"><span class="g-ico">🧭</span>先看推荐再深入</div>
+        <p>热门推荐按口碑和更新状态排列，适合快速建立对柚子猫的整体印象，避免一上来就陷入考据细节。</p>
+      </div>
+      <div class="guide-item">
+        <div class="g-title"><span class="g-ico">📱</span>移动端阅读友好</div>
+        <p>页面在手机端自动收起导航、放大正文，卡片和列表都做了窄屏适配，适合通勤时随手翻看。</p>
+      </div>
+      <div class="guide-item">
+        <div class="g-title"><span class="g-ico">🔖</span>收藏更新节点</div>
+        <p>最新更新列表按时间倒序排列，方便你确认柚子猫最近有没有新篇上线，减少反复搜索。</p>
+      </div>
+      <div class="guide-item">
+        <div class="g-title"><span class="g-ico">🔗</span>推荐路径清晰</div>
+        <p>从分类入口到深度解析再到 FAQ，页面提供了比较完整的浏览路径，可以按兴趣跳转，不强制线性阅读。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="section-faq">
+  <div class="container">
+    <div class="section-head">
+      <h2>常见问题</h2>
+      <span class="sub">关于柚子猫的高频疑问</span>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q">柚子猫目前更新到哪一集了？<span class="mark">＋</span></div>
+        <div class="faq-a">截至 2026 年 11 月 7 日，柚子猫正片已更新至第 24 集「屋檐下的雪」，冬季篇先导预告已经发布，正片预计 11 月下旬上线。更新节奏整体偏稳定，但季节限定篇会对档期做微调。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">第一次看柚子猫，应该从哪一集开始？<span class="mark">＋</span></div>
+        <div class="faq-a">建议从轻喜剧属性的「厨房事故」或「午后打盹」入门，这两集节奏轻快、对白少，不需要前置知识。建立兴趣后再看雨夜篇和季节限定篇，情绪浓度更高，体验会更完整。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">柚子猫的主要角色有哪些？<span class="mark">＋</span></div>
+        <div class="faq-a">核心是柚子猫本人，配角包括三花、小黑、小狗和面包店老板。三花偏细腻、小黑偏莽撞、小狗话多热情，面包店老板更多承担场景串联作用。角色之间以陪伴关系为主，没有复杂冲突线。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">柚子猫属于什么类型的短片？<span class="mark">＋</span></div>
+        <div class="faq-a">整体归为治愈系日常短片，带有轻喜剧和情绪向两种分支。部分季节限定篇更接近氛围短片，台词很少，主要靠画面和声音推进。它不是强剧情向作品，更适合放松观看。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">有和柚子猫风格接近的推荐吗？<span class="mark">＋</span></div>
+        <div class="faq-a">可以关注同类暖色手绘、低冲突日常短片，以及以动物角色为核心的治愈系作品。选择时重点看画风是否柔和、单集时长是否控制在 5 分钟内，这两点决定了观看压力。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">柚子猫后续会有衍生内容吗？<span class="mark">＋</span></div>
+        <div class="faq-a">根据公开动态，衍生插画集正在筹备，原声带试听也已开放。后续可能补充幕后分镜和角色设定资料，具体形式以官方发布为准，本页会同步更新相关资讯。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评论 -->
+<section class="section" id="section-comment">
+  <div class="container">
+    <div class="section-head">
+      <h2>用户评论</h2>
+      <span class="sub">近 30 天社区讨论摘录</span>
+    </div>
+    <div class="comment-grid">
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">柚</div><div><div class="c-name">橘子汽水</div><div class="c-time">2026.11.05</div></div></div><div class="c-text">雨夜散步那集是真的舒服，基本没台词，但雨声和脚步配合得很好，适合睡前看。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">三</div><div><div class="c-name">三花搬运工</div><div class="c-time">2026.11.04</div></div></div><div class="c-text">三花人气第一不意外，性格写得很细，希望后面能多给一点单独出场的机会。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">小</div><div><div class="c-name">小黑不黑</div><div class="c-time">2026.11.02</div></div></div><div class="c-text">第 24 集雪天场景挺好看的，就是节奏比前面慢了一些，看个人口味吧。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">面</div><div><div class="c-name">面包店常客</div><div class="c-time">2026.10.31</div></div></div><div class="c-text">从厨房事故入坑的，笑点不刻意，柚子猫那种冷面反应很加分。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">秋</div><div><div class="c-name">秋天捡叶子</div><div class="c-time">2026.10.28</div></div></div><div class="c-text">秋季限定篇后劲有点大，结尾留白处理得挺好，没有强行煽情。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">狗</div><div><div class="c-name">话多小狗</div><div class="c-time">2026.10.26</div></div></div><div class="c-text">小狗出场那几集互动感强很多，希望多来点群像日常。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">原</div><div><div class="c-name">原声带循环中</div><div class="c-time">2026.10.24</div></div></div><div class="c-text">配乐比想象中用心，有几段钢琴旋律很抓耳，试听上线后就一直在循环。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">分</div><div><div class="c-name">分镜爱好者</div><div class="c-time">2026.10.21</div></div></div><div class="c-text">空镜用得挺克制，没有为了文艺而文艺，这点在同类里算比较难得的。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">追</div><div><div class="c-name">追更小分队</div><div class="c-time">2026.10.19</div></div></div><div class="c-text">更新频率还可以，不过冬季篇预告看完有点等不及，希望别跳票。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">路</div><div><div class="c-name">路人甲看片</div><div class="c-time">2026.10.16</div></div></div><div class="c-text">整体不错，但有几集节奏偏淡，可能更适合一次看两三集而不是连刷。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">插</div><div><div class="c-name">插画收集癖</div><div class="c-time">2026.10.14</div></div></div><div class="c-text">画风真的很适合做壁纸，希望插画集能收录更多场景原画。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">新</div><div><div class="c-name">新来的橘猫</div><div class="c-time">2026.10.11</div></div></div><div class="c-text">刚补完前 10 集，角色关系比想象中清楚，入门压力不大，推荐给想放松的人。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">吐</div><div><div class="c-name">吐槽但不黑</div><div class="c-time">2026.10.08</div></div></div><div class="c-text">个别集数台词有点重复，不过整体氛围还是喜欢的，属于瑕不掩瑜。</div></div>
+      <div class="comment-card"><div class="c-head"><div class="c-avatar">考</div><div><div class="c-name">考据小本本</div><div class="c-time">2026.10.05</div></div></div><div class="c-text">角色小传整理得很实用，终于把出场顺序和关系线理清楚了。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 相关资讯 -->
+<section class="section" id="section-news">
+  <div class="container">
+    <div class="section-head">
+      <h2>相关资讯</h2>
+      <span class="sub">柚子猫内容动态与延伸阅读</span>
+    </div>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="n-date">2026.11.06</div>
+        <h3>柚子猫冬季篇先导预告发布，雪景场景首次公开</h3>
+        <p>30 秒片段展示了雪夜屋檐下的空镜与角色互动，正片预计 11 月下旬上线，具体日期待公布。</p>
+      </article>
+      <article class="news-card">
+        <div class="n-date">2026.10.29</div>
+        <h3>本月人气角色投票结果：三花以 37% 得票率居首</h3>
+        <p>投票持续一周，小黑与小狗分列二三位。官方表示会参考票数调整后续角色出场比重。</p>
+      </article>
+      <article class="news-card">
+        <div class="n-date">2026.10.22</div>
+        <h3>秋季特辑播放量刷新系列单集纪录</h3>
+        <p>「发光叶子」上线三天数据超过此前所有单集，评论区对结尾留白讨论度较高。</p>
+      </article>
+      <article class="news-card">
+        <div class="n-date">2026.10.15</div>
+        <h3>柚子猫原声带试听开放，含两首未公开 demo</h3>
+        <p>前三集配乐已上线主流音乐平台，制作人提到部分旋律来自分镜阶段的手写草稿。</p>
+      </article>
+      <article class="news-card">
+        <div class="n-date">2026.10.09</div>
+        <h3>衍生插画集筹备中，预计收录 60 余张场景原画</h3>
+        <p>官方透露将包含分镜草图与未使用设定，具体发售时间与规格尚未公开。</p>
+      </article>
+      <article class="news-card">
+        <div class="n-date">2026.09.20</div>
+        <h3>创作者访谈：柚子猫的灵感来自一只晒太阳的橘猫</h3>
+        <p>导演在访谈中聊到系列分镜习惯与配色思路，强调“留白比台词更重要”。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fb-logo"><span class="logo-mark">柚</span><span>柚子猫</span></div>
+        <p>专注柚子猫内容专题整理，汇总短片、角色、更新动态与社区讨论。页面信息以公开内容为基础进行编辑整理，仅供浏览参考。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容导航</h4>
+        <a href="/#section-hot">热门推荐</a>
+        <a href="/#section-latest">最新更新</a>
+        <a href="/#section-category">分类入口</a>
+        <a href="/#section-deep">深度解析</a>
+        <a href="/#section-faq">常见问题</a>
+      </div>
+      <div class="footer-col">
+        <h4>友情链接</h4>
+        <a href="/#section-hero">柚子猫专题首页</a>
+        <a href="/#section-comment">社区讨论区</a>
+        <a href="/#section-news">资讯动态</a>
+        <a href="/#section-guide">体验指南</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 柚子猫专题页 · 内容整理与编辑维护</span>
+      <span>免责声明：本页为内容导航与信息整理页面，相关作品版权归原权利人所有。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    if(!q) return;
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(i){ i.classList.remove('open'); });
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+})();
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                                                                          </html>
