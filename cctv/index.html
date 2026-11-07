@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CCTV5直播-体育赛事在线观看_CCTV5节目表与高清直播入口</title>
+  <meta name="description" content="CCTV5直播聚合体育赛事在线观看入口，提供CCTV5节目表、高清直播信号、热门赛事推荐与实时资讯，覆盖足球、篮球、乒乓球、田径等，方便球迷收藏与追赛。">
+  <meta name="keywords" content="CCTV5直播,CCTV5在线直播,体育赛事直播,央视体育直播,CCTV5节目表">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c8102e'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23fff' stroke-width='4'/%3E%3Cpath d='M30 20v24M42 20v24M20 30h24M20 38h24' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg:#f4f6fa;
+      --surface:#ffffff;
+      --surface-2:#f9fafc;
+      --ink:#141a24;
+      --ink-2:#3f4a5a;
+      --muted:#6f7a8a;
+      --line:#e3e8ef;
+      --brand:#c8102e;
+      --brand-2:#a00d25;
+      --brand-soft:#fdeaee;
+      --accent:#0b63b8;
+      --accent-soft:#e8f1fc;
+      --gold:#b1782e;
+      --gold-soft:#fbf3e6;
+      --radius:16px;
+      --radius-sm:12px;
+      --shadow:0 12px 28px rgba(18,26,40,.07);
+      --shadow-soft:0 4px 14px rgba(18,26,40,.05);
+      --max:1200px;
+      --font:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #ffe7ed 0%, transparent 58%),
+        radial-gradient(1000px 520px at 92% 0%, #e7f0ff 0%, transparent 55%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.7;
+      font-size:16px;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;display:block;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+
+    /* 顶部导航 */
+    .c5-head{
+      position:sticky;top:0;z-index:60;
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .c5-head-in{
+      display:flex;align-items:center;gap:18px;
+      min-height:64px;
+    }
+    .c5-logo{
+      display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    .c5-logo-mark{
+      width:42px;height:42px;border-radius:12px;
+      background:linear-gradient(145deg,var(--brand),#8f0b21);
+      color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900;
+      box-shadow:0 8px 18px rgba(200,16,46,.28);
+      flex:0 0 auto;
+    }
+    .c5-logo-text{display:flex;flex-direction:column;line-height:1.15;}
+    .c5-logo-text b{font-size:18px;}
+    .c5-logo-text span{font-size:11px;color:var(--muted);letter-spacing:1.5px;font-weight:600;}
+    .c5-nav{
+      display:flex;align-items:center;gap:4px;flex:1;overflow:auto;
+      scrollbar-width:none;
+    }
+    .c5-nav::-webkit-scrollbar{display:none;}
+    .c5-nav a{
+      padding:8px 12px;border-radius:999px;color:var(--ink-2);
+      font-size:14px;font-weight:600;white-space:nowrap;
+      transition:.2s;
+    }
+    .c5-nav a:hover{background:var(--brand-soft);color:var(--brand);}
+    .c5-head-actions{display:flex;align-items:center;gap:10px;}
+    .c5-live-chip{
+      display:inline-flex;align-items:center;gap:6px;
+      background:var(--brand-soft);color:var(--brand);
+      border:1px solid #f6c9d2;
+      padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;
+      white-space:nowrap;
+    }
+    .c5-live-dot{
+      width:7px;height:7px;border-radius:50%;background:var(--brand);
+      box-shadow:0 0 0 4px rgba(200,16,46,.14);
+      animation:pulse 1.6s infinite;
+    }
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+    .c5-search-mini{
+      display:flex;align-items:center;gap:8px;
+      background:var(--surface-2);border:1px solid var(--line);
+      border-radius:999px;padding:7px 12px;min-width:180px;
+    }
+    .c5-search-mini input{
+      border:0;background:transparent;outline:none;font:inherit;font-size:13px;width:100%;
+      color:var(--ink);
+    }
+    .c5-search-mini svg{flex:0 0 auto;opacity:.6;}
+
+    /* Banner */
+    .c5-hero{
+      position:relative;overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:
+        linear-gradient(115deg, rgba(200,16,46,.95) 0%, rgba(160,13,37,.86) 42%, rgba(11,99,184,.82) 100%),
+        #1a2230;
+      color:#fff;
+      margin-top:26px;
+      box-shadow:0 24px 48px rgba(16,26,44,.18);
+    }
+    .c5-hero::after{
+      content:"";position:absolute;inset:auto -80px -160px auto;width:420px;height:420px;
+      background:radial-gradient(circle at center, rgba(255,255,255,.28), transparent 65%);
+      pointer-events:none;
+    }
+    .c5-hero-in{padding:44px 42px 38px;position:relative;z-index:1;}
+    .c5-kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+      color:#fff;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;
+      letter-spacing:.4px;
+    }
+    .c5-hero h1{
+      margin:16px 0 12px;
+      font-size:clamp(28px,4.2vw,44px);
+      line-height:1.16;letter-spacing:-.6px;
+      font-weight:900;
+      max-width:860px;
+    }
+    .c5-hero p{
+      margin:0 0 8px;color:rgba(255,255,255,.86);max-width:760px;font-size:15px;
+    }
+    .c5-hero p + p{margin-top:2px;}
+    .c5-hero-tools{
+      display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;align-items:center;
+    }
+    .c5-hero-search{
+      display:flex;align-items:center;gap:10px;
+      background:#fff;border-radius:999px;padding:7px 8px 7px 16px;
+      min-width:min(420px,100%);
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+    }
+    .c5-hero-search input{
+      border:0;outline:none;font:inherit;font-size:14px;flex:1;min-width:0;
+      color:var(--ink);background:transparent;
+    }
+    .c5-hero-search button{
+      border:0;cursor:pointer;background:var(--brand);color:#fff;
+      font:inherit;font-weight:700;font-size:13px;padding:9px 18px;border-radius:999px;
+      transition:.2s;white-space:nowrap;
+    }
+    .c5-hero-search button:hover{background:var(--brand-2);}
+    .c5-hero-btns{display:flex;flex-wrap:wrap;gap:8px;}
+    .c5-hero-btns a{
+      display:inline-flex;align-items:center;gap:6px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.24);
+      color:#fff;padding:8px 13px;border-radius:999px;font-size:13px;font-weight:600;
+      transition:.2s;
+    }
+    .c5-hero-btns a:hover{background:rgba(255,255,255,.24);}
+    .c5-hero-stats{
+      display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;
+      color:rgba(255,255,255,.82);font-size:13px;
+    }
+    .c5-hero-stats b{color:#fff;font-size:16px;margin-right:4px;}
+
+    /* 通用section */
+    .c5-section{margin-top:48px;}
+    .c5-sec-head{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+      margin-bottom:18px;flex-wrap:wrap;
+    }
+    .c5-sec-head h2{
+      margin:0;font-size:clamp(20px,2.4vw,26px);letter-spacing:-.3px;line-height:1.25;
+    }
+    .c5-sec-head h2 small{
+      display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:1px;
+      margin-top:6px;text-transform:uppercase;
+    }
+    .c5-sec-head .c5-link{
+      font-size:13px;font-weight:700;color:var(--brand);
+      display:inline-flex;align-items:center;gap:6px;
+      white-space:nowrap;
+    }
+    .c5-sec-head .c5-link:hover{text-decoration:underline;}
+
+    /* 快速分类 */
+    .c5-cats{
+      display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;
+    }
+    .c5-cat{
+      background:var(--surface);border:1px solid var(--line);border-radius:14px;
+      padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--ink-2);
+      transition:.2s;box-shadow:var(--shadow-soft);
+    }
+    .c5-cat span{display:block;font-size:20px;line-height:1;margin-bottom:8px;}
+    .c5-cat:hover{transform:translateY(-3px);border-color:#f3bcc6;color:var(--brand);box-shadow:var(--shadow);}
+
+    /* 卡片通用 */
+    .c5-card{
+      background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+      box-shadow:var(--shadow-soft);transition:.22s;
+    }
+    .c5-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d7dee9;}
+
+    /* 热门推荐网格 */
+    .c5-grid-hot{
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;
+    }
+    .c5-hot-card{
+      padding:18px;display:flex;flex-direction:column;gap:10px;min-height:210px;
+    }
+    .c5-cover{
+      height:86px;border-radius:12px;position:relative;overflow:hidden;
+      background:linear-gradient(135deg,#e9eef7,#f7f9fc);
+      border:1px solid var(--line);
+    }
+    .c5-cover::before{
+      content:"";position:absolute;inset:0;
+      background:
+        radial-gradient(circle at 22% 18%, rgba(200,16,46,.22), transparent 42%),
+        radial-gradient(circle at 80% 72%, rgba(11,99,184,.20), transparent 46%);
+    }
+    .c5-cover::after{
+      content:attr(data-badge);position:absolute;left:10px;top:10px;
+      background:rgba(20,26,36,.82);color:#fff;font-size:11px;font-weight:700;
+      padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px);
+    }
+    .c5-tags{display:flex;flex-wrap:wrap;gap:5px;}
+    .c5-tag{
+      font-size:11px;font-weight:700;color:var(--ink-2);
+      background:var(--surface-2);border:1px solid var(--line);
+      padding:3px 8px;border-radius:999px;
+    }
+    .c5-tag.red{background:var(--brand-soft);border-color:#f6c9d2;color:var(--brand);}
+    .c5-tag.blue{background:var(--accent-soft);border-color:#cfe2fa;color:var(--accent);}
+    .c5-tag.gold{background:var(--gold-soft);border-color:#f0dfc4;color:var(--gold);}
+    .c5-hot-card h3{
+      margin:0;font-size:15px;line-height:1.4;letter-spacing:-.2px;
+    }
+    .c5-hot-card p{margin:0;font-size:13px;color:var(--muted);line-height:1.65;flex:1;}
+    .c5-meta{
+      display:flex;align-items:center;justify-content:space-between;gap:8px;
+      font-size:12px;color:var(--muted);padding-top:8px;border-top:1px dashed var(--line);
+    }
+    .c5-meta b{color:var(--brand);font-size:13px;}
+
+    /* 最新更新列表 */
+    .c5-updates{
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+    }
+    .c5-upd{
+      display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;
+      background:var(--surface);border:1px solid var(--line);border-radius:14px;
+      padding:14px;box-shadow:var(--shadow-soft);transition:.2s;
+    }
+    .c5-upd:hover{border-color:#d7dee9;box-shadow:var(--shadow);}
+    .c5-upd-time{
+      font-weight:800;color:var(--brand);font-size:14px;line-height:1.2;
+      background:var(--brand-soft);border-radius:10px;padding:8px 6px;text-align:center;
+      border:1px solid #f6c9d2;
+    }
+    .c5-upd-time small{display:block;font-size:10px;color:var(--muted);font-weight:700;margin-top:2px;}
+    .c5-upd h3{margin:0 0 4px;font-size:14px;line-height:1.45;}
+    .c5-upd p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.6;}
+    .c5-upd .c5-tag{margin-top:7px;display:inline-block;}
+
+    /* 深度解析正文 */
+    .c5-article{
+      background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+      padding:28px 30px;box-shadow:var(--shadow-soft);
+    }
+    .c5-article h2{font-size:24px;margin:0 0 10px;letter-spacing:-.3px;}
+    .c5-article h3{font-size:18px;margin:26px 0 8px;letter-spacing:-.2px;}
+    .c5-article p{margin:0 0 14px;color:var(--ink-2);font-size:15px;}
+    .c5-article .c5-note{
+      border-left:4px solid var(--brand);background:var(--brand-soft);
+      padding:12px 16px;border-radius:0 12px 12px 0;color:var(--ink-2);
+      font-size:14px;margin:18px 0;
+    }
+    .c5-article ul{margin:0 0 16px;padding-left:20px;color:var(--ink-2);font-size:15px;}
+    .c5-article li{margin:6px 0;}
+
+    /* 体验指南 */
+    .c5-guide{
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
+    }
+    .c5-guide-card{
+      padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:14px;
+      box-shadow:var(--shadow-soft);
+    }
+    .c5-guide-card b{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:30px;height:30px;border-radius:10px;background:var(--brand-soft);color:var(--brand);
+      font-size:14px;margin-bottom:10px;
+    }
+    .c5-guide-card h3{margin:0 0 6px;font-size:15px;}
+    .c5-guide-card p{margin:0;font-size:13px;color:var(--muted);line-height:1.7;}
+
+    /* FAQ */
+    .c5-faq{display:grid;gap:12px;}
+    .c5-faq details{
+      background:var(--surface);border:1px solid var(--line);border-radius:14px;
+      padding:16px 18px;box-shadow:var(--shadow-soft);
+    }
+    .c5-faq summary{
+      cursor:pointer;font-weight:700;font-size:15px;list-style:none;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .c5-faq summary::-webkit-details-marker{display:none;}
+    .c5-faq summary::after{
+      content:"+";color:var(--brand);font-size:20px;font-weight:400;line-height:1;
+    }
+    .c5-faq details[open] summary::after{content:"–";}
+    .c5-faq p{margin:10px 0 0;font-size:14px;color:var(--muted);line-height:1.75;}
+
+    /* 评论 */
+    .c5-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+    .c5-comment{
+      background:var(--surface);border:1px solid var(--line);border-radius:14px;
+      padding:14px 16px;box-shadow:var(--shadow-soft);
+    }
+    .c5-comment-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;}
+    .c5-comment-user{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;}
+    .c5-avatar{
+      width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#f3bcc6,#c8102e);
+      color:#fff;display:grid;place-items:center;font-size:11px;font-weight:800;flex:0 0 auto;
+    }
+    .c5-comment time{font-size:11px;color:var(--muted);white-space:nowrap;}
+    .c5-comment p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.7;}
+
+    /* 资讯 */
+    .c5-news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+    .c5-news-card{padding:18px;display:flex;flex-direction:column;gap:8px;}
+    .c5-news-card time{font-size:11px;color:var(--muted);font-weight:600;}
+    .c5-news-card h3{margin:0;font-size:15px;line-height:1.45;}
+    .c5-news-card p{margin:0;font-size:13px;color:var(--muted);line-height:1.65;}
+
+    /* 订阅引导 */
+    .c5-subscribe{
+      margin-top:44px;
+      background:linear-gradient(120deg,#141a24,#222c3d);
+      border-radius:20px;color:#fff;padding:30px 32px;
+      display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;
+      box-shadow:0 20px 40px rgba(16,26,44,.18);
+    }
+    .c5-subscribe h2{margin:0 0 4px;font-size:22px;letter-spacing:-.3px;}
+    .c5-subscribe p{margin:0;color:rgba(255,255,255,.7);font-size:13px;}
+    .c5-subscribe-form{display:flex;gap:8px;flex-wrap:wrap;}
+    .c5-subscribe-form input{
+      border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);
+      color:#fff;border-radius:999px;padding:10px 16px;font:inherit;font-size:13px;
+      min-width:220px;outline:none;
+    }
+    .c5-subscribe-form input::placeholder{color:rgba(255,255,255,.5);}
+    .c5-subscribe-form button{
+      border:0;background:var(--brand);color:#fff;border-radius:999px;
+      padding:10px 20px;font:inherit;font-weight:700;font-size:13px;cursor:pointer;
+      transition:.2s;
+    }
+    .c5-subscribe-form button:hover{background:#e01838;}
+
+    /* 页脚 */
+    .c5-footer{
+      margin-top:48px;padding:30px 0 46px;border-top:1px solid var(--line);
+      color:var(--muted);font-size:13px;
+    }
+    .c5-footer-in{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px;}
+    .c5-footer h4{margin:0 0 10px;color:var(--ink);font-size:14px;}
+    .c5-footer a{display:block;padding:3px 0;color:var(--muted);}
+    .c5-footer a:hover{color:var(--brand);}
+    .c5-footer-bottom{
+      margin-top:22px;padding-top:16px;border-top:1px dashed var(--line);
+      display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:12px;
+    }
+
+    /* 响应式 */
+    @media (max-width:1000px){
+      .c5-grid-hot{grid-template-columns:repeat(3,minmax(0,1fr));}
+      .c5-cats{grid-template-columns:repeat(4,minmax(0,1fr));}
+      .c5-news{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .c5-footer-in{grid-template-columns:1fr 1fr;}
+    }
+    @media (max-width:760px){
+      .c5-head-in{flex-wrap:wrap;padding:8px 0;}
+      .c5-nav{order:3;flex-basis:100%;padding-bottom:4px;}
+      .c5-head-actions{margin-left:auto;}
+      .c5-search-mini{display:none;}
+      .c5-hero-in{padding:28px 22px 26px;}
+      .c5-grid-hot{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .c5-updates{grid-template-columns:1fr;}
+      .c5-guide{grid-template-columns:1fr;}
+      .c5-comments{grid-template-columns:1fr;}
+      .c5-news{grid-template-columns:1fr;}
+      .c5-article{padding:22px 20px;}
+      .c5-subscribe{padding:24px 22px;}
+      .c5-cats{grid-template-columns:repeat(4,minmax(0,1fr));}
+    }
+    @media (max-width:460px){
+      .c5-grid-hot{grid-template-columns:1fr;}
+      .c5-hero-search{min-width:100%;}
+      .c5-cats{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="c5-head">
+  <div class="wrap c5-head-in">
+    <a class="c5-logo" href="/#c5-hero" aria-label="CCTV5直播首页">
+      <span class="c5-logo-mark">C5</span>
+      <span class="c5-logo-text">
+        <b>CCTV5直播</b>
+        <span>SPORTS LIVE HUB</span>
+      </span>
+    </a>
+    <nav class="c5-nav" aria-label="主导航">
+      <a href="/#c5-hot">热门推荐</a>
+      <a href="/#c5-updates">最新更新</a>
+      <a href="/#c5-cats">分类入口</a>
+      <a href="/#c5-deep">深度解析</a>
+      <a href="/#c5-faq">常见问题</a>
+      <a href="/#c5-comments">用户评论</a>
+      <a href="/#c5-news">相关资讯</a>
+    </nav>
+    <div class="c5-head-actions">
+      <span class="c5-live-chip"><span class="c5-live-dot"></span>直播中</span>
+      <div class="c5-search-mini" role="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg>
+        <input type="search" placeholder="搜索赛事 / 节目表">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 首屏Banner -->
+  <section id="c5-hero" class="c5-hero" aria-labelledby="c5-hero-title">
+    <div class="c5-hero-in">
+      <span class="c5-kicker">央视体育 · 高清直播信号聚合</span>
+      <h1 id="c5-hero-title">CCTV5直播：体育赛事在线观看与节目表实时入口</h1>
+      <p>聚合CCTV5直播信号、节目排期与赛事看点，覆盖足球、篮球、乒乓球、田径、游泳等热门项目。</p>
+      <p>适合需要随时跟进直播、回看节目单和查找赛事入口的体育迷收藏使用。</p>
+
+      <div class="c5-hero-tools">
+        <form class="c5-hero-search" onsubmit="return false;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6f7a8a" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg>
+          <input type="search" placeholder="输入赛事名称、球队或节目关键词" aria-label="搜索CCTV5直播内容">
+          <button type="button">搜索直播</button>
+        </form>
+        <div class="c5-hero-btns">
+          <a href="/#c5-hot">今日热门</a>
+          <a href="/#c5-updates">最新更新</a>
+          <a href="/#c5-cats">分类入口</a>
+          <a href="/#c5-deep">深度解析</a>
+          <a href="/#c5-faq">常见问题</a>
+          <a href="/#c5-news">赛事资讯</a>
+          <a href="/#c5-comments">用户讨论</a>
+        </div>
+      </div>
+
+      <div class="c5-hero-stats">
+        <span><b>18</b>个热门赛事入口</span>
+        <span><b>7×24</b>小时节目追踪</span>
+        <span><b>2026</b>赛季持续更新</span>
+        <span><b>多</b>终端适配阅读</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容简介 -->
+  <section id="c5-intro" class="c5-section" aria-labelledby="c5-intro-title">
+    <div class="c5-sec-head">
+      <h2 id="c5-intro-title">CCTV5直播内容简介 <small>WHAT YOU CAN FIND HERE</small></h2>
+      <a class="c5-link" href="/#c5-hot">查看热门推荐 →</a>
+    </div>
+    <div class="c5-article">
+      <p>CCTV5直播是许多体育迷日常关注的核心入口，用户搜索这个词，通常是想快速找到央视体育频道的在线观看方式、当天节目表以及正在进行的赛事信号。本页围绕CCTV5直播这一主题，整理赛事分类、热门推荐、最新更新与常见问题，帮助读者在信息比较密集的体育内容中快速定位自己关心的项目。</p>
+      <p>页面内容覆盖足球、篮球、乒乓球、羽毛球、田径、游泳、排球、冰雪项目等常见体育门类，同时也关注综合赛事和专题节目。对于习惯按照赛程追比赛的观众来说，CCTV5直播不只是一个频道名称，更代表着相对稳定的赛事信号、解说风格和节目编排节奏。本页提供的入口与介绍，适合希望快速浏览、收藏和二次回访的用户。</p>
+      <p>如果你是刚接触体育直播的轻度观众，可以先从热门推荐和分类入口了解当前受关注的项目；如果你已经有固定关注的主队或运动员，则可以直接查看最新更新和相关资讯，了解节目排期变化。页面中的深度解析与FAQ模块，也尽量从实际观看需求出发，回答“看什么、什么时候看、去哪里找”这类具体问题，而不是泛泛而谈。</p>
+      <p>CCTV5直播相关的内容更新频率较高，赛事时间、节目单和转播安排都可能调整，因此建议收藏本页并定期回访。页面采用清晰的分区结构，配合移动端友好的阅读布局，让用户在手机或电脑上都能比较快地找到目标栏目。对于需要长期跟进体育赛事的人来说，这样的内容聚合页会比单篇资讯更容易形成稳定的浏览路径。</p>
+    </div>
+  </section>
+
+  <!-- 热门内容推荐 -->
+  <section id="c5-hot" class="c5-section" aria-labelledby="c5-hot-title">
+    <div class="c5-sec-head">
+      <h2 id="c5-hot-title">热门CCTV5直播推荐 <small>TRENDING NOW</small></h2>
+      <a class="c5-link" href="/#c5-updates">查看更新动态 →</a>
+    </div>
+    <div class="c5-grid-hot">
+
+      <article class="c5-card c5-hot-card">
+        <div class="c5-cover" data-badge="足球"></div>
+        <div class="c5-tags">
+          <span class="c5-tag red">国际足球</span>
+          <span class="c5-tag">预选赛</span>
+          <span class="c5-tag blue">高清直播</span>
+        </div>
+        <h3>世预赛焦点战：国家队主场关键轮次</h3>
+        <p>围绕小组出线形势展开的焦点对决，赛前分析与首发预测值得关注，适合关注国家队走势的球迷。</p>
+        <div class="c5-meta"><span>更新至第3轮</span><b>热度 9.4</b></div>
+      </article>
+
+      <article class="c5-card c5-hot-card">
+        <div class="c5-cover" data-badge="篮球"></div>
+        <div class="c5-tags">
+          <span class="c5-tag gold">CBA</span>
+          <span class="c5-tag">常规赛</span>
+          <span class="c5-tag blue">赛后集锦</span>
+        </div>
+        <h3>CBA常规赛强强对话：积分榜前列直接交锋</h3>
+        <p>两队近期状态都在上升，内线对抗与外线命中率是主要看点，适合关注国内篮球联赛的观众。</p>
+        <div class="c5-meta"><span>今晚 19:35</span><b>热度 9.1</b></div>
+      </article>
+
+      <article class="c5-card c5-hot-card">
+        <div class="c5-cover" data-badge="乒乓球"></div>
+        <div class="c5-tags">
+          <span class="c5-tag red">WTT</span>
+          <span class="c5-tag">单打</span>
+          <span class="c5-tag">国乒</span>
+        </div>
+        <h3>WTT冠军赛单打半决赛：国乒主力迎战强敌</h3>
+        <p>发接发环节和前三板控制将决定比赛走向，适合想了解国乒近期状态与技战术变化的观众。</p>
+        <div class="c5-meta"><span>半决赛日</span><b>热度 8.9</b></div>
+      </article>
+
+      <article class="c5-card c5-hot-card">
+        <div class="c5-cover" data-badge="田径"></div>
+        <div class="c5-tags">
+          <span class="c5-tag blue">钻石联赛</span>
+          <span class="c5-tag">短跑</span>
+          <span class="c5-tag gold">纪录挑战</span>
+        </div>
+        <h3>田径钻石联赛：百米飞人大战与接力看点</h3>
+        <p>短跑项目的起跑反应和途中跑节奏是核心观察点，适合关注田径赛季进程与选手状态的观众。</p>
+        <div class="c5-meta"><span>周末直播</span><b>热度 8.7</b></div>
+      </article>
+
+      <article class="c5-card c5-hot-card">
+        <div class="c5-cover" data-badge="游泳"></div>
+        <div class="c5-tags">
+          <span class="c5-tag blue">游泳</span>
+          <span class="c5-tag">锦标赛</span>
+          <span class="c5-tag red">新星</span>
+        </div>
+        <h3>全国游泳锦标赛：混合泳与自由泳项目争夺</h3>
+        <p>年轻选手的报名成绩与临场发挥值得关注，适合想了解游泳项目新周期人才储备的观众。</p>
+        <div class="c5-meta"><span>预赛已开始</span><b>热度 8.5</b></div>
+      </article>
+
+      <article class="c5-card c5-hot-card">
+        <div class="c5-cover" data-badge="排球"></div>
+        <div class="c5-tags">
+          <span class="c5-tag gold">女排</span>
+          <span class="c5-tag">联赛</span>
+          <span class="c5-tag blue">焦点战</span>
+        </div>
+        <h3>女排联赛焦点轮：强攻与拦防体系正面碰撞</h3>
+        <p>两队主攻手状态和副攻拦网配合是比赛关键，适合关注国内女排联赛走势和球员表现的观众。</p>
+        <div class="c5-meta"><span>明晚 20:00</span><b>热度 8.3</b></div>
+      </article>
+
+      <article class="c5-card c5-hot-card">
+        <div class="c5-cover" data-badge="冰雪"></div>
+        <div class="c5-tags">
+          <span class="c5-tag blue">短道速滑</span>
+          <span class="c5-tag">世界杯</span>
+          <span class="c5-tag red">晋级形势</span>
+        </div>
+        <h3>短道速滑世界杯：混合接力与个人项目连轴转</h3>
+        <p>弯道超越和接力交接是主要悬念，适合关注冬季项目赛季积分与国家队表现的体育迷。</p>
+        <div class="c5-meta"><span>分站赛进行中</span><b>热度 8.0</b></div>
+      </article>
+
+      <article class="c5-card c5-hot-card">
+        <div class="c5-cover" data-badge="综合"></div>
+        <div class="c5-tags">
+          <span class="c5-tag">综合体育</span>
+          <span class="c5-tag gold">专题节目</span>
+          <span class="c5-tag blue">赛事回顾</span>
+        </div>
+        <h3>体育人间与赛事回顾：经典比赛背后的故事</h3>
+        <p>从人物访谈和比赛复盘两个角度回看经典赛事，适合不想只看比分、也关心体育故事的观众。</p>
+        <div class="c5-meta"><span>周末专题</span><b>热度 7.8</b></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section id="c5-updates" class="c5-section" aria-labelledby="c5-updates-title">
+    <div class="c5-sec-head">
+      <h2 id="c5-updates-title">CCTV5直播最新节目动态 <small>LATEST SCHEDULE UPDATES</small></h2>
+      <a class="c5-link" href="/#c5-news">更多资讯 →</a>
+    </div>
+    <div class="c5-updates">
+
+      <article class="c5-upd">
+        <div class="c5-upd-time">19:30<small>今日</small></div>
+        <div>
+          <h3>足球预选赛赛前特别节目上线</h3>
+          <p>围绕当晚国家队比赛的首发预测、对手分析和历史交锋展开，适合赛前快速了解背景。</p>
+          <span class="c5-tag red">即将直播</span>
+        </div>
+      </article>
+
+      <article class="c5-upd">
+        <div class="c5-upd-time">21:00<small>今日</small></div>
+        <div>
+          <h3>CBA常规赛第8轮直播信号确认</h3>
+          <p>积分榜前列球队正面交手，赛前热身和名单公布预计在开赛前30分钟更新。</p>
+          <span class="c5-tag gold">篮球焦点</span>
+        </div>
+      </article>
+
+      <article class="c5-upd">
+        <div class="c5-upd-time">14:00<small>明日</small></div>
+        <div>
+          <h3>乒乓球冠军赛半决赛节目单更新</h3>
+          <p>单打半决赛顺序调整，国乒主力场次预计安排在下午时段，建议提前查看最新节目表。</p>
+          <span class="c5-tag blue">赛程调整</span>
+        </div>
+      </article>
+
+      <article class="c5-upd">
+        <div class="c5-upd-time">09:20<small>明日</small></div>
+        <div>
+          <h3>田径钻石联赛精选场次回看上线</h3>
+          <p>百米和接力项目集锦已整理，适合错过直播的观众按项目快速回看关键镜头。</p>
+          <span class="c5-tag">回看更新</span>
+        </div>
+      </article>
+
+      <article class="c5-upd">
+        <div class="c5-upd-time">20:00<small>11-09</small></div>
+        <div>
+          <h3>女排联赛焦点轮直播预告</h3>
+          <p>主攻对位与拦防体系分析已更新，赛前名单和首发变化将在当天傍晚补充。</p>
+          <span class="c5-tag gold">女排联赛</span>
+        </div>
+      </article>
+
+      <article class="c5-upd">
+        <div class="c5-upd-time">16:30<small>11-09</small></div>
+        <div>
+          <h3>游泳锦标赛决赛单元节目调整</h3>
+          <p>混合泳决赛时间微调，自由泳接力项目顺延，关注游泳项目的观众需留意最新排期。</p>
+          <span class="c5-tag blue">时间调整</span>
+        </div>
+      </article>
+
+      <article class="c5-upd">
+        <div class="c5-upd-time">10:00<small>11-10</small></div>
+        <div>
+          <h3>短道速滑世界杯分站赛前瞻上线</h3>
+          <p>混合接力晋级形势和主要对手状态整理完毕，适合冬季项目观众提前收藏。</p>
+          <span class="c5-tag red">冬季项目</span>
+        </div>
+      </article>
+
+      <article class="c5-upd">
+        <div class="c5-upd-time">18:00<small>11-10</small></div>
+        <div>
+          <h3>体育专题节目《赛场内外》新一期更新</h3>
+          <p>本期聚焦运动员赛前备战与恢复训练，适合想了解赛事幕后内容的观众。</p>
+          <span class="c5-tag">专题节目</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section id="c5-cats" class="c5-section" aria-labelledby="c5-cats-title">
+    <div class="c5-sec-head">
+      <h2 id="c5-cats-title">按项目浏览CCTV5直播 <small>SPORTS CATEGORIES</small></h2>
+      <a class="c5-link" href="/#c5-hot">全部热门 →</a>
+    </div>
+    <div class="c5-cats">
+      <a class="c5-cat" href="/#c5-hot"><span>⚽</span>足球赛事</a>
+      <a class="c5-cat" href="/#c5-hot"><span>🏀</span>篮球联赛</a>
+      <a class="c5-cat" href="/#c5-hot"><span>🏓</span>乒乓球</a>
+      <a class="c5-cat" href="/#c5-hot"><span>🏸</span>羽毛球</a>
+      <a class="c5-cat" href="/#c5-hot"><span>🏊</span>游泳跳水</a>
+      <a class="c5-cat" href="/#c5-hot"><span>🏃</span>田径赛场</a>
+      <a class="c5-cat" href="/#c5-hot"><span>🏐</span>排球联赛</a>
+      <a class="c5-cat" href="/#c5-hot"><span>⛸️</span>冰雪项目</a>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section id="c5-deep" class="c5-section" aria-labelledby="c5-deep-title">
+    <div class="c5-sec-head">
+      <h2 id="c5-deep-title">CCTV5直播深度解析 <small>EDITORIAL ANALYSIS</small></h2>
+      <a class="c5-link" href="/#c5-faq">查看常见问题 →</a>
+    </div>
+    <div class="c5-article">
+      <h2>CCTV5直播为什么值得长期关注</h2>
+      <p>从内容消费角度看，CCTV5直播的核心价值在于赛事覆盖的广度与节目编排的稳定性。体育赛事本身具有很强的时间属性，用户往往不是“随时想看”，而是“在特定时间看特定比赛”。因此，一个以CCTV5直播为主题的聚合页，首先要解决的就是信息组织问题：哪些项目正在直播、哪些节目已经调整时间、哪些场次适合回看。本页通过分类入口、最新更新和热门推荐三个层次，把赛事信息拆成比较容易消化的结构，减少用户在多个页面之间来回查找的成本。</p>
+      <h3>赛事类型与观看节奏</h3>
+      <p>足球和篮球仍然是CCTV5直播中讨论度较高的两大类。足球赛事的观看节奏通常围绕赛前分析、首发公布、半场调整和赛后复盘展开，适合愿意花时间跟进完整过程的球迷；篮球则更强调攻防转换和关键球处理，单场比赛的起伏感更强。乒乓球、羽毛球这类项目单场时间相对可控，适合碎片时间观看，也更适合通过技术细节去理解比赛走向。田径、游泳等综合项目则往往集中在锦标赛和大型运动会期间，观看方式更偏向“按单元追重点场次”。</p>
+      <p>不同项目的直播体验差异，也影响了用户对节目表的需求。足球观众更关心开赛时间和加时安排，篮球观众会留意背靠背赛程和轮换名单，乒乓球观众则习惯查看半决赛、决赛的具体时段。本页在最新更新模块中尽量保留时间信息，正是为了让不同观赛习惯的用户都能较快找到自己关心的内容。</p>
+      <div class="c5-note">
+        CCTV5直播相关内容会随赛事进程调整，节目单、转播场次和直播入口可能发生变化，建议以实际播出信息为准，并将本页作为浏览入口和参考线索。
+      </div>
+      <h3>人物、解说与内容吸引力</h3>
+      <p>CCTV5直播的吸引力不仅来自比赛本身，也来自解说风格、赛前包装和专题节目。稳定、清晰的解说能帮助观众理解战术背景，尤其是足球和篮球这类节奏较快的项目，解说对场上形势的梳理会直接影响观看体验。乒乓球、羽毛球等技术型项目则更依赖慢镜头和技战术拆解，观众在直播之外也愿意看回放和集锦。对于体育迷来说，熟悉的主持人和评论嘉宾往往也是频道辨识度的一部分。</p>
+      <p>从内容搜索意图来看，搜索CCTV5直播的用户大致可以分为几类：一类想找在线观看入口，一类想看当天节目表，一类关注特定赛事是否转播，还有一类只是浏览近期热门体育内容。本页在结构上没有只做单一入口，而是把推荐、更新、分类、解析、FAQ和评论放在同一条浏览路径上，让不同意图的用户都能找到下一步。对于希望长期跟进赛事的人来说，这种内容组织方式比单篇资讯更耐读，也更适合收藏。</p>
+      <h3>同类内容比较与使用建议</h3>
+      <p>与单纯的赛事比分页相比，CCTV5直播专题页更强调“观看路径”和“节目节奏”；与短视频集锦相比，它的优势在于完整赛事和专题分析；与综合体育门户相比，它又更聚焦央视体育频道的节目编排习惯。用户可以把本页当作一个轻量级的导航页面：先看热门推荐确定今晚看什么，再看最新更新确认时间，最后通过分类入口延伸到具体项目。如果遇到节目调整，也可以回到FAQ和资讯区查看补充说明。</p>
+      <p>适合人群方面，本页对经常观看足球、篮球、乒乓球和综合赛事的观众比较友好，也适合想了解体育节目编排、为周末观赛做准备的轻度用户。页面不追求堆砌全部赛事，而是尽量让信息层级清楚，方便反复浏览。</p>
+    </div>
+  </section>
+
+  <!-- 体验指南 -->
+  <section id="c5-guide" class="c5-section" aria-labelledby="c5-guide-title">
+    <div class="c5-sec-head">
+      <h2 id="c5-guide-title">CCTV5直播页面体验指南 <small>HOW TO USE THIS PAGE</small></h2>
+      <a class="c5-link" href="/#c5-faq">常见疑问 →</a>
+    </div>
+    <div class="c5-guide">
+      <div class="c5-guide-card">
+        <b>1</b>
+        <h3>结构清晰，先看热门</h3>
+        <p>首屏热门推荐适合快速判断当天值得关注的赛事，卡片中保留类型标签和看点摘要，减少逐条翻找。</p>
+      </div>
+      <div class="c5-guide-card">
+        <b>2</b>
+        <h3>分类筛选方便</h3>
+        <p>按足球、篮球、乒乓球等项目进入对应入口，适合有明确偏好的用户快速缩小浏览范围。</p>
+      </div>
+      <div class="c5-guide-card">
+        <b>3</b>
+        <h3>移动端友好</h3>
+        <p>页面在手机端会自动调整卡片排列，文字和标签保持可读，适合通勤或碎片时间浏览节目动态。</p>
+      </div>
+      <div class="c5-guide-card">
+        <b>4</b>
+        <h3>适合追更与收藏</h3>
+        <p>最新更新模块按时间整理节目动态，配合相关资讯，适合长期关注赛事排期变化的观众。</p>
+      </div>
+      <div class="c5-guide-card">
+        <b>5</b>
+        <h3>推荐路径可延伸</h3>
+        <p>从热门推荐到深度解析，再到FAQ和评论，浏览路径比较自然，不容易在单一页面停留后失去方向。</p>
+      </div>
+      <div class="c5-guide-card">
+        <b>6</b>
+        <h3>信息以实际播出为准</h3>
+        <p>赛事时间与转播安排可能变化，页面内容作为参考线索使用，具体以官方节目预告和实际直播为准。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="c5-faq" class="c5-section" aria-labelledby="c5-faq-title">
+    <div class="c5-sec-head">
+      <h2 id="c5-faq-title">CCTV5直播常见问题 <small>FAQ</small></h2>
+      <a class="c5-link" href="/#c5-comments">查看用户讨论 →</a>
+    </div>
+    <div class="c5-faq">
+
+      <details>
+        <summary>CCTV5直播主要覆盖哪些体育项目？</summary>
+        <p>常见的覆盖范围包括足球、篮球、乒乓球、羽毛球、排球、田径、游泳、冰雪项目以及综合赛事专题。不同时间段的节目安排会围绕赛季重点调整，足球和篮球通常占据较多直播时段，乒乓球、羽毛球等技术型项目则常以锦标赛和冠军赛形式出现。关注综合体育的用户还可以留意专题节目和赛事回顾，适合在非直播时段补充观看。</p>
+      </details>
+
+      <details>
+        <summary>想看当天CCTV5直播节目表，先看页面哪个部分？</summary>
+        <p>可以先看“最新更新”模块，这里按时间整理了近期节目动态，包括直播预告、时间调整和回看上线等信息。如果只是想快速判断当晚看什么，也可以先浏览热门推荐中的赛事卡片，再回到更新区确认具体时段。遇到赛程调整时，相关资讯区通常会补充说明，适合在开赛前再次核对。</p>
+      </details>
+
+      <details>
+        <summary>足球和篮球赛事在CCTV5直播中怎么选？</summary>
+        <p>如果更看重完整比赛过程和战术分析，足球赛事通常适合预留较长时间观看，赛前节目和赛后复盘也值得留意。篮球节奏更快，适合关注关键球、攻防转换和球员状态的观众。两者在CCTV5直播中都比较常见，可以根据当天赛程和个人时间安排选择。热门推荐卡片中会标注类型和看点，便于快速比较。</p>
+      </details>
+
+      <details>
+        <summary>乒乓球、羽毛球这类项目适合碎片时间观看吗？</summary>
+        <p>相对适合。乒乓球和羽毛球单场比赛时间通常比较可控，半决赛、决赛等关键场次也有明确的时段安排。对于碎片时间观看的用户，可以优先关注单打焦点场次和技术统计，再根据兴趣决定是否回看完整比赛。CCTV5直播相关内容中，这类项目经常配合慢镜头和技战术解析，适合想了解细节但时间有限的观众。</p>
+      </details>
+
+      <details>
+        <summary>CCTV5直播的节目安排会临时调整吗？</summary>
+        <p>有可能。赛事时间、转播场次和节目编排会受到赛程变化、天气、场地和转播计划等因素影响。建议在开赛前查看最新更新和资讯区，确认时间是否顺延或场次是否变更。本页提供的节目动态以整理和参考为主，实际播出仍应以官方预告和直播画面为准。</p>
+      </details>
+
+      <details>
+        <summary>除了直播，还能在专题页里看什么？</summary>
+        <p>除了直播入口和节目表，页面还提供热门推荐、分类入口、深度解析、用户评论和相关资讯。深度解析适合想了解赛事背景、项目特点和观看节奏的读者；评论区更接近普通观众的讨论氛围，能看到不同角度的评价；资讯区则补充近期动态和节目调整。把这些模块结合起来使用，比只看单条赛程信息更容易形成完整的观赛准备。</p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section id="c5-comments" class="c5-section" aria-labelledby="c5-comments-title">
+    <div class="c5-sec-head">
+      <h2 id="c5-comments-title">用户评论与观赛讨论 <small>COMMUNITY VOICES</small></h2>
+      <a class="c5-link" href="/#c5-news">相关资讯 →</a>
+    </div>
+    <div class="c5-comments">
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">看</span>看球不熬夜</div>
+          <time>2026-10-12</time>
+        </div>
+        <p>最近足球预选赛的排期挺密，页面把时间整理出来省了不少事，不过还是希望赛前首发确认能再快一点。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">篮</span>篮下小抛投</div>
+          <time>2026-10-15</time>
+        </div>
+        <p>CBA这轮强强对话确实好看，内线对抗比预期激烈。CCTV5直播的解说对轮换分析比较到位，适合边看边听。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">乒</span>乒乓慢半拍</div>
+          <time>2026-10-18</time>
+        </div>
+        <p>乒乓球半决赛时间调整了，差点错过。建议关注节目表的朋友开赛前再刷一遍更新区，这个提醒很实用。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">田</span>田径场边人</div>
+          <time>2026-10-21</time>
+        </div>
+        <p>钻石联赛的百米项目还是短跑最有看头，起跑反应差距太明显了。回看集锦剪得比较干净，适合补看关键镜头。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">游</span>泳池边观赛</div>
+          <time>2026-10-23</time>
+        </div>
+        <p>游泳锦标赛的决赛单元安排有点晚，不过项目衔接比较紧凑。年轻选手的表现比预想中稳，后面可以继续关注。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">排</span>排球不看比分</div>
+          <time>2026-10-25</time>
+        </div>
+        <p>女排联赛这轮焦点战拦防质量很高，主攻对位很有看头。希望节目单里能多放一点技术统计，光看比分不过瘾。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">冰</span>冰面追风</div>
+          <time>2026-10-27</time>
+        </div>
+        <p>短道速滑的接力项目太容易出意外了，弯道超越和交接棒都值得细看。CCTV5直播的信号还算稳定，回看也方便。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">综</span>综合体育迷</div>
+          <time>2026-10-29</time>
+        </div>
+        <p>体育专题节目比纯直播更适合下饭，人物故事和比赛复盘穿插着看不容易疲劳。希望经典赛事回顾能再多一些。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">羽</span>羽毛球场边</div>
+          <time>2026-10-31</time>
+        </div>
+        <p>羽毛球最近直播场次不算多，不过有比赛的时候基本都会看。页面分类入口找项目挺快的，比翻节目单省时间。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">赛</span>赛程收藏家</div>
+          <time>2026-11-01</time>
+        </div>
+        <p>节目调整信息更新还算及时，就是有时候赛前半小时才确认，对习惯提前安排时间的人有点不友好。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">解</span>解说听不清</div>
+          <time>2026-11-02</time>
+        </div>
+        <p>整体内容挺全，热门推荐和更新区配合看比较顺。个别场次解说声音偏小，不知道是不是信号问题。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">周</span>周末看两场</div>
+          <time>2026-11-03</time>
+        </div>
+        <p>周末一般就看足球和篮球两场，CCTV5直播的赛前分析挺适合做背景音。页面把热门赛事放前面，选起来不纠结。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">新</span>新观众小陈</div>
+          <time>2026-11-04</time>
+        </div>
+        <p>刚开始看乒乓球，技术细节还不太懂，深度解析里关于发接发和前三板的说明挺有帮助，至少知道该看什么了。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">老</span>老球迷阿凯</div>
+          <time>2026-11-05</time>
+        </div>
+        <p>足球预选赛这种关键场次还是得看直播，集锦感受不到节奏。页面信息量可以，希望后续把回看入口再整理清楚点。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">数</span>数据派小刘</div>
+          <time>2026-11-06</time>
+        </div>
+        <p>篮球比赛如果多给一点命中率和篮板数据会更好，现在看点描述偏文字化，喜欢看数据的人还得自己找。</p>
+      </article>
+
+      <article class="c5-comment">
+        <div class="c5-comment-head">
+          <div class="c5-comment-user"><span class="c5-avatar">追</span>追赛不追星</div>
+          <time>2026-11-07</time>
+        </div>
+        <p>今天先看足球预选赛，晚上再补篮球，节目排期基本能串起来。CCTV5直播相关页面收藏一个就够用了。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section id="c5-news" class="c5-section" aria-labelledby="c5-news-title">
+    <div class="c5-sec-head">
+      <h2 id="c5-news-title">CCTV5直播相关资讯 <small>RELATED NEWS</small></h2>
+      <a class="c5-link" href="/#c5-hot">回到热门 →</a>
+    </div>
+    <div class="c5-news">
+
+      <article class="c5-card c5-news-card">
+        <time>2026-11-06</time>
+        <h3>足球预选赛转播场次确认，赛前节目同步更新</h3>
+        <p>围绕国家队关键轮次的转播安排已经确认，赛前分析节目将提前半小时上线，适合需要了解首发和对手状态的观众。</p>
+      </article>
+
+      <article class="c5-card c5-news-card">
+        <time>2026-11-05</time>
+        <h3>CBA常规赛第8轮看点：积分榜前列直接对话</h3>
+        <p>本轮焦点集中在两支状态正佳的球队之间，内线对抗和外线效率将成为比赛走向的关键变量。</p>
+      </article>
+
+      <article class="c5-card c5-news-card">
+        <time>2026-11-04</time>
+        <h3>乒乓球冠军赛半决赛时间微调，国乒场次受关注</h3>
+        <p>单打半决赛顺序有所调整，国乒主力场次预计安排在下午时段，关注CCTV5直播的观众可以提前留意节目表。</p>
+      </article>
+
+      <article class="c5-card c5-news-card">
+        <time>2026-11-03</time>
+        <h3>游泳锦标赛决赛单元公布，混合泳接力压轴</h3>
+        <p>决赛项目顺序已经公布，混合泳和自由泳接力安排在靠后时段，适合按单元追重点场次的观众收藏。</p>
+      </article>
+
+      <article class="c5-card c5-news-card">
+        <time>2026-11-02</time>
+        <h3>短道速滑世界杯分站赛前瞻：接力项目竞争激烈</h3>
+        <p>混合接力晋级形势较为复杂，弯道超越和交接棒稳定性可能成为决定名次的关键因素。</p>
+      </article>
+
+      <article class="c5-card c5-news-card">
+        <time>2026-11-01</time>
+        <h3>体育专题节目更新：赛场内外聚焦运动员备战</h3>
+        <p>新一期专题从训练和恢复角度切入，补充直播之外的幕后内容，适合想了解赛事另一面的观众。</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 订阅引导 -->
+  <section class="c5-subscribe" aria-labelledby="c5-subscribe-title">
+    <div>
+      <h2 id="c5-subscribe-title">订阅CCTV5直播节目提醒</h2>
+      <p>留下邮箱，获取近期赛事排期与热门直播入口更新摘要。</p>
+    </div>
+    <form class="c5-subscribe-form" onsubmit="return false;">
+      <input type="email" placeholder="请输入常用邮箱地址" aria-label="订阅邮箱">
+      <button type="button">订阅提醒</button>
+    </form>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="c5-footer">
+  <div class="wrap">
+    <div class="c5-footer-in">
+      <div>
+        <h4>CCTV5直播</h4>
+        <p style="margin:0;line-height:1.8;color:var(--muted);font-size:12.5px;max-width:300px;">
+          聚合体育赛事直播入口、节目表与热门推荐，为观众提供清晰的浏览路径和赛事信息参考。
+        </p>
+      </div>
+      <div>
+        <h4>热门栏目</h4>
+        <a href="/#c5-hot">热门推荐</a>
+        <a href="/#c5-updates">最新更新</a>
+        <a href="/#c5-cats">分类入口</a>
+        <a href="/#c5-deep">深度解析</a>
+      </div>
+      <div>
+        <h4>互动与帮助</h4>
+        <a href="/#c5-faq">常见问题</a>
+        <a href="/#c5-comments">用户评论</a>
+        <a href="/#c5-news">相关资讯</a>
+        <a href="/#c5-intro">内容简介</a>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <a href="/#c5-hero">体育直播导航</a>
+        <a href="/#c5-updates">节目表参考</a>
+        <a href="/#c5-hot">赛事推荐入口</a>
+        <a href="/#c5-news">体育资讯聚合</a>
+      </div>
+    </div>
+    <div class="c5-footer-bottom">
+      <span>© 2026 CCTV5直播内容专题 · 本站为体育内容聚合与信息参考页面</span>
+      <span>免责声明：页面信息整理自公开内容，赛事时间与转播安排请以官方实际播出为准。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
